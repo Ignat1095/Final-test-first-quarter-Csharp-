@@ -20,6 +20,7 @@
 // ["Russia", "Denmark", "Kazan"] → []
 
 // Задача: Написать программу, которая из имеющегося массива строк формирует новый массив из строк, длина которых *меньше*, либо равна *3 символам*.
+
 string[] array1 = { "Hello", "2", "world", ":-)" };
 string[] array2 = { "1234", "1567", "-2", "computer science" };
 string[] array3 = { "Russia", "Denmark", "Kazan" };
@@ -42,7 +43,8 @@ void PrintArray(string[] P_arr)
 
 void SortArray(string[] S_arr)
 {
-    Console.Write("\nSort word (with simbols < 3) = ");
+    int count = 0;
+    Console.Write("\nSort words (with simbols < 3) = ");
     Console.Write("[ ");
     for (int i = 0; i < S_arr.GetLength(0); i++)
     {
@@ -50,9 +52,11 @@ void SortArray(string[] S_arr)
         {
             if (i < S_arr.GetLength(0) - 1) Console.Write(S_arr[i] + ", ");
             else Console.Write(S_arr[i] + " ");
+            count++;
         }
 
     }
+    if (count < 1) Console.Write("'Array is empty =(' ");
     Console.Write("]");
 }
 
