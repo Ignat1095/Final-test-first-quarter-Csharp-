@@ -23,7 +23,7 @@
 
 string[] myArray = { "I", "am", "diveloper", "J_J", "^_^" };
 
-
+int Max_Word_Length = 3;
 
 void PrintArray(string[] P_arr)
 {
@@ -37,4 +37,22 @@ void PrintArray(string[] P_arr)
     Console.Write("]\n");
 }
 
+void SortArray(string[] S_arr)
+{
+    Console.Write("\nSort word (with simbols < 3) = ");
+    Console.Write("[ ");
+    for (int i = 0; i < S_arr.GetLength(0); i++)
+    {
+        if (S_arr[i].Length <= Max_Word_Length)
+        {
+            if (i < S_arr.GetLength(0) - 1) Console.Write(S_arr[i] + ", ");
+            else Console.Write(S_arr[i] + " ");
+        }
+
+    }
+    Console.Write("]");
+}
+
 PrintArray(myArray);
+
+SortArray(myArray);
